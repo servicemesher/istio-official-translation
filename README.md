@@ -28,3 +28,11 @@ Istio 官方文档中文翻译工作组，仅用来处理相关任务分派和�
 7. 若有发现[已经关闭的 Issue](https://github.com/servicemesher/istio-official-translation/issues?q=label%3Afinished+is%3Aclosed) 中的英文原文有更新，请直接在 Issue 中回复“有更新”。
 
 8. 重复第一步开始的流程。
+
+## 新增了一点自动化指令
+
+所有指令，都在 Issue 中以 Comment 的形式输入，仅对 Member 有效。如果出错或者不符合条件，不会有任何提示。
+
+1. `/accept`: 适用于 `pending` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `translating`
+1. `/pushed`: 适用于 `translating` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `pushed`
+1. `/merged`: 适用于 `pushed` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `finished`，然后关闭 Issue
