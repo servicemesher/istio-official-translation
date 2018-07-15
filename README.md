@@ -12,7 +12,7 @@ Istio 官方文档中文翻译工作组，仅用来处理相关任务分派和�
 
 3. 翻译之前可以请查阅[约定和术语表](https://github.com/servicemesher/istio-official-translation/issues/77)，若对某些词汇的翻译模棱两可，可以直接回复该 Issue。
 
-4. 翻译过程中可以在项目根目录中运行 `hugo server`，能够启动一个本地 Web 服务器，访问 <http://localhost:1313> 在其中可以进行预览。
+4. 翻译过程中可以在项目根目录中运行 `make serve`，能够启动一个本地 Web 服务器，访问 <http://localhost:1313> 在其中可以进行预览。
 
 5. 提交 PR 之前，可以在项目根目录运行 `make lint`，初步做一下 CI 的检查，成功后再提交。
 
