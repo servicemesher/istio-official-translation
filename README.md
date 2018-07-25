@@ -16,11 +16,11 @@ Istio 官方文档中文翻译工作组，仅用来处理相关任务分派和�
 
 5. 提交 PR 之前，可以在项目根目录运行 `make lint`，初步做一下 CI 的检查，成功后再提交。
 
-   因为该命令使用到了`gcr.io/istio-testing/website-builder:2018-06-15`镜像，为了便于中国用户使用，请执行下面的命令下载该镜像，然后再执行`make lint`检查：
+   因为该命令使用到了`gcr.io/istio-testing/website-builder:2018-07-14`镜像，为了便于中国用户使用，请执行下面的命令下载该镜像，然后再执行`make lint`检查：
 
    ```bash
-   docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-06-15
-   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-06-15 gcr.io/istio-testing/website-builder:2018-06-15
+   docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-07-14
+   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-07-14 gcr.io/istio-testing/website-builder:2018-07-14
    ```
 
 6. 如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 1.0 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。
