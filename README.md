@@ -34,3 +34,8 @@ Istio 官方文档中文翻译工作组，仅用来处理相关任务分派和�
 1. `/merged`: 适用于 `pushed` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `finished`，然后关闭 Issue
 
 > 注意：每个用户只能同时有三个处于 `translating` 状态的 Issue，超过上限之后，Bot 不会回应 `/accept` 指令。所以务必确认指派已经完成之后才开始翻译工作。
+
+## 发现文档更新怎么办？
+
+如果发现文档更新，并且根据文档名称在 [Issue 库](https://github.com/servicemesher/istio-official-translation/issues)中找不到对应的 Issue，可以
+[新建 Issue](https://github.com/servicemesher/istio-official-translation/issues/new)，Issue 标题写入变更的文件名，例如 `content/docs/reference/config/policy-and-telemetry/adapters/_index.md`，并在 Body 中加入 `@dustise, @rootsongjm`。这样就可以避免在你进行翻译的同时，Bot 重新将该文件放入任务队列。
