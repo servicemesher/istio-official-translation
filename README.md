@@ -30,7 +30,7 @@ Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/
 
    ```bash
    docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-05
-   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-05 gcr.io/istio-testing/website-builder:2018-09-15
+   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-05 gcr.io/istio-testing/website-builder:2018-10-05
    ```
 
 7. 如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。
