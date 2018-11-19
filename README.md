@@ -26,11 +26,11 @@ Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/
 
 6. 提交 PR 之前，可以在项目根目录运行 `make gen` 用来在项目的 `public` 目录下生成 HTML 代码，然后执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
 
-   因为该命令使用到了`gcr.io/istio-testing/website-builder:2018-08-30`镜像，为了便于中国用户使用，请执行下面的命令下载该镜像，然后再执行`make lint`检查：
+   因为该命令使用到了`gcr.io/istio-testing/website-builder:2018-10-08`镜像，为了便于中国用户使用，请执行下面的命令下载该镜像，然后再执行`make lint`检查：
 
    ```bash
-   docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-05
-   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-05 gcr.io/istio-testing/website-builder:2018-10-05
+   docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-08
+   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2018-10-08 gcr.io/istio-testing/website-builder:2018-10-08
    ```
 
 7. 如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。
