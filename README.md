@@ -51,10 +51,13 @@ Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/
 如果发现文档更新，并且根据文档名称在 [Issue 库](https://github.com/servicemesher/istio-official-translation/issues)中找不到对应的 Issue，可以
 [新建 Issue](https://github.com/servicemesher/istio-official-translation/issues/new)，Issue 标题写入变更的文件名，例如 `content/docs/reference/config/policy-and-telemetry/adapters/_index.md`，并在 Body 中加入 `@dustise, @rootsongjc`。这样就可以避免在你进行翻译的同时，Bot 重新将该文件放入任务队列。
 
----
+## 翻译注意事项
+
+在翻译 Istio 官方文档前需要注意以下几点：
+
+- 仔细阅读[术语和习惯用语](https://preliminary.istio.io/zh/about/contribute/terms/)。
+- 文章标头中的 keyword 用作 SEO，不需要翻译，见 [该 PR](https://github.com/istio/istio.io/pull/3055)。
+
+![ServiceMesher微信公众号二维码](https://ws1.sinaimg.cn/large/006tNc79ly1fz058o9546j31jt0beq9s.jpg)
 
 [ServiceMesher Community](http://www.servicemesher.com) All Right Reserved
-
-<p align="center">
-  <img src="https://ws1.sinaimg.cn/large/00704eQkgy1fshv989hhqj309k09k0t6.jpg" alt="ServiceMesher微信公众号二维码"/>
-</p>
