@@ -26,6 +26,8 @@ Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/
 
 6. 提交 PR 之前，可以在项目根目录运行 `make gen` 用来在项目的 `public` 目录下生成 HTML 代码，然后执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
 
+> 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
+
    因为该命令使用到了`gcr.io/istio-testing/website-builder:2018-10-08`镜像，为了便于中国用户使用，请执行下面的命令下载该镜像，然后再执行`make lint`检查：
 
    ```bash
