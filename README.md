@@ -2,11 +2,11 @@
 
 Istio 官方文档中文翻译和问题追踪工作组，仅用来处理相关任务分派和跟踪。
 
-当前已合并到 Istio 官方网站中的中文部分可以通过 https://preliminary.istio.io/zh/ 预览。
+当前Istio官网中文页面已归档于：https://archive.istio.io/v1.2/zh/
 
-交流微信群：[联系我](http://www.servicemesher.com/contact)
+- [加入交流微信群](https://www.servicemesher.com/contact)
 
-Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/servicemesher/shared_invite/enQtNDE2OTkwMjkxNzEzLTQwOTcxNTAxMmMxMDU4OTliYTJmYjY5NjY2YzJlNWE3N2FkZjFjM2UzNDU0ZGVlZTliODBhZGUxNjI0ZmNjZmI)
+- Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/servicemesher/shared_invite/enQtNDE2OTkwMjkxNzEzLTQwOTcxNTAxMmMxMDU4OTliYTJmYjY5NjY2YzJlNWE3N2FkZjFjM2UzNDU0ZGVlZTliODBhZGUxNjI0ZmNjZmI)
 
 ## 工作流程
 
@@ -31,8 +31,8 @@ Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/
    因为该命令使用到了`gcr.io/istio-testing/website-builder:2019-03-03`镜像，为了便于中国用户使用，请执行下面的命令下载该镜像，然后再执行`make lint`检查：
 
    ```bash
-   docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03
-   docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03 gcr.io/istio-testing/website-builder:2019-03-03
+docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03
+docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03 gcr.io/istio-testing/website-builder:2019-03-03
    ```
 
 7. 如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。
@@ -60,6 +60,4 @@ Slack 工作组：[**Service Mesher Slack Workplace**](https://join.slack.com/t/
 - 仔细阅读[术语和习惯用语](https://preliminary.istio.io/zh/about/contribute/terms/)。
 - 文章标头中的 keyword 用作 SEO，不需要翻译，见 [该 PR](https://github.com/istio/istio.io/pull/3055)。
 
-![ServiceMesher微信公众号二维码](https://ws1.sinaimg.cn/large/006tNc79ly1fz058o9546j31jt0beq9s.jpg)
-
-[ServiceMesher Community](http://www.servicemesher.com) All Right Reserved
+![ServiceMesher微信公众号二维码](https://tva1.sinaimg.cn/large/006y8mN6gy1g872im58vmj312m0begp8.jpg)
