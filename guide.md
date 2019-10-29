@@ -26,8 +26,12 @@
 
 ### 准备工作
 
-- 报名：[请先在这里报名](https://docs.google.com/spreadsheets/d/1zHDiXHsRD2sc3UWClTPzXTBcTSuEdRbf1tTj4AdTE3o/edit)，填写基本信息（姓名、微信、Github账号）。
-- 账号：您需要准备一个微信号、钉钉号、GitHub账号。报名后，管理员会将您分别添加到翻译工作组的微信群、钉钉群和ServiceMesher的GitHub组织。
+- 账号：您需要先准备一个钉钉号和GitHub账号。钉钉用来协作和沟通，Github进行任务认领和翻译提交。报名后，管理员会将您分别添加到翻译工作组的钉钉群和ServiceMesher的GitHub组织。
+
+- 申请加入：请扫描下面的二维码加入钉钉协作群，通过审批后进行登记，即可参与翻译工作。
+
+  <img src="ddgroup.jpg" alt="dingding group" style="zoom:25%;" />
+
 - 为保证翻译的统一性和准确性，请在翻译前仔细阅读[术语表](term.md)
   - 常用词汇：对常见的技术词汇给出统一的翻译；
   - 术语：文档中出现的专有技术名词，关键词，**保持原文不翻译；**
@@ -61,7 +65,7 @@
 
 #### Step3：翻译
 
-- 请随时参考[约定和术语表](https://github.com/servicemesher/istio-official-translation/issues/77)，若对某些词汇的翻译模棱两可，可以直接回复该 Issue，或者在微信群请求帮助。
+- 请随时参考[约定和术语表](https://github.com/servicemesher/istio-official-translation/issues/77)，若对某些词汇的翻译模棱两可，可以直接回复该 Issue，或者在钉钉群请求帮助。
 
 - 文档由若干 `md` 和 `html` 文档构成，将issue中给出的原始文件复制一份到对应中文目录下进行翻译。
 
