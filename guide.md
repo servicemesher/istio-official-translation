@@ -79,6 +79,8 @@
 
 #### Step5：提交PR
 
+**CI检查**
+
 提交 PR 之前，可以在项目根目录运行 `make gen` 用来在项目的 `public` 目录下生成 HTML 代码，然后执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
 
 > 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
@@ -90,7 +92,28 @@ docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03
 docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03 gcr.io/istio-testing/website-builder:2019-03-03
 ```
 
-如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。
+**提交PR**
+
+如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。为方便管理和辨识，请遵守下面的模板定义您的PR：
+
+```text
+标题：
+zh-translation:<file_full_path>
+内容：
+ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID>
+[ ] Configuration Infrastructure
+[ ] Docs
+[ ] Installation
+[ ] Networking
+[ ] Performance and Scalability
+[ ] Policies and Telemetry
+[ ] Security
+[ ] Test and Release
+[ ] User Experience
+[ ] Developer Infrastructure
+```
+
+其中，标题中的<file_full_path>是翻译的源文件路径；内容中的ref是当前翻译任务的issue链接。
 
 #### Step6：校对（review）
 
