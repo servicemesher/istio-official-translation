@@ -1,7 +1,3 @@
----
-typora-root-url: ./ddgroup.jpg
----
-
 # Istio官方文档翻译指导手册
 
 ## 概要
