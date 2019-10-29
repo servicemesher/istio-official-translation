@@ -1,3 +1,7 @@
+---
+typora-root-url: ./ddgroup.jpg
+---
+
 # Istio官方文档翻译指导手册
 
 ## 概要
@@ -30,7 +34,7 @@
 
 - 申请加入：请扫描下面的二维码加入钉钉协作群，通过审批后您需要登记一下基本信息（具体见群公告），之后管理员会将您添加到ServiceMesher的GitHub组织，即可正式参与翻译。
 
-  <img src="ddgroup.jpg" alt="dingding group" style="zoom:15%;" />
+  ![dingding](ddgroup.jpg)
 
 - 为保证翻译的统一性和准确性，请在翻译前仔细阅读[术语表](term.md)
   - 常用词汇：对常见的技术词汇给出统一的翻译；
