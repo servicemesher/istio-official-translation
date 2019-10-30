@@ -94,11 +94,11 @@
 
 > 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
 
-因为该命令使用到了`gcr.io/istio-testing/website-builder:2019-03-03`镜像，如果您无法访问此资源，可以执行下面的命令下载替代镜像，然后再执行`make lint`检查：
+因为该命令使用到了`gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`镜像，如果您无法访问此资源，可以执行下面的命令下载替代镜像，然后再执行`make lint`检查：
 
 ```
-docker pull gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03
-docker tag gcr.mirrors.ustc.edu.cn/istio-testing/website-builder:2019-03-03 gcr.io/istio-testing/website-builder:2019-03-03
+docker pull jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
+docker tag jimmysong/istio-testing-build-tools:2019-10-24T14-05-17 gcr.io/istio-testing/build-tools:2019-10-24T14-05-17
 ```
 
 **提交PR**
