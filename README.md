@@ -79,22 +79,67 @@
 - `md` 代码块与代码输出内容不要翻译。
 - 对于翻译文稿中涉及到的静态文件，直接沿用英文版的文件（例如 `![english image](/docs/concept.....)`），不再需要自行拷贝。
 
-#### Step4：本地构建
+#### Step4：本地构建和预览
 
-翻译结束后可以先在本地构建网站进行预览。
+翻译结束后可以先在本地构建网站进行预览。有两种方式可以将Istio的website运行起来：
 
-- 使用hugo进行网站的构建，如果您本地没有安装hugo，可以去[这里](https://gohugo.io/getting-started/quick-start/)查看如何安装。
-- 在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，运行`hugo server`在本地启动web服务器，通过`http://localhost:1313/`进行网站的预览。
+**通过本地运行hugo启动**
+
+hugo提供了一个本地的web服务器，可以启动网站。如果您本地没有安装hugo，可以去[这里](https://gohugo.io/getting-started/quick-start/)查看如何安装。
+
+然后，在Istio.io仓库的[根目录](https://github.com/istio/istio.io)下，运行`hugo server`在本地启动web服务器，通过`http://localhost:1313/zh`进行中文网站的预览。如看到类似下面的输出，则表示web服务器已经启动成功：
+
+```text
+                   | EN  | ZH
++------------------+-----+-----+
+  Pages            | 545 | 545
+  Paginator pages  |   0 |   0
+  Non-page files   | 164 | 164
+  Static files     |  54 |  54
+  Processed images |   0 |   0
+  Aliases          |   1 |   0
+  Sitemaps         |   2 |   1
+  Cleaned          |   0 |   0
+
+Total in 47355 ms
+Watching for changes in /work/{archetypes,assets,content,data,generated,i18n,layouts,static}
+Watching for config changes in /work/config.toml
+Environment: "development"
+Serving pages from memory
+Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
+```
+
+**通过Docker启动**
+
+另外一种是直接使用docker镜像启动。
+
+运行`docker pull gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`下载镜像。如果您的网络环境无法访问此资源，可以执行下面的命令下载替代镜像：
+
+```
+docker pull jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
+docker tag jimmysong/istio-testing-build-tools:2019-10-24T14-05-17 gcr.io/istio-testing/build-tools:2019-10-24T14-05-17
+```
+
+接下来，在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，运行`make serve`启动web服务器，启动成功后通过`http://localhost:1313/zh`进行网站的预览。
+
+注：如果无法看到中文页面，先检查根目录下的config.toml文件中的中文配置是否已打开：
+
+- 首先需要将[config.toml](https://github.com/istio/istio.io/blob/master/config.toml)文件中的中文配置打开（取消原来的`#`注释符），否则将无法预览中文部分的文档：
+
+  ```yaml
+  [languages]
+      [languages.zh]
+          contentDir = "content/zh"
+      [languages.en]
+          contentDir = "content/en"
+  ```
 
 #### Step5：提交PR
 
-**CI检查**
-
-提交 PR 之前，可以在项目根目录运行 `make gen` 用来在项目的 `public` 目录下生成 HTML 代码，然后执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
+执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
 
 > 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
-
-因为该命令使用到了`gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`镜像，如果您无法访问此资源，可以执行下面的命令下载替代镜像，然后再执行`make lint`检查：
 
 ```
 docker pull jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
