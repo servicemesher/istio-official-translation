@@ -123,9 +123,7 @@ make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
 
 启动成功后通过`http://localhost:1313/zh`进行网站的预览。
 
-注：如果无法看到中文页面，先检查根目录下的config.toml文件中的中文配置是否已打开：
-
-- 首先需要将[config.toml](https://github.com/istio/istio.io/blob/master/config.toml)文件中的中文配置打开（取消原来的`#`注释符），否则将无法预览中文部分的文档：
+注：如果无法看到中文页面，先检查根目录下的config.toml文件中的中文配置是否已打开：需要将[config.toml](https://github.com/istio/istio.io/blob/master/config.toml)文件中的中文配置打开（取消原来的`#`注释符）：
 
   ```yaml
   [languages]
@@ -179,6 +177,13 @@ ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID
 - 终审：负责对翻译的文档做概要性的检查，聚焦在行文的通顺性、一致性、符合中文语言习惯，词汇、术语准确。终审通过后由管理员approve当前PR，就可以进行合并了。
 
 **参与Review**：所有 istio.io 的 PR都会通过 Github 机器人同步在钉钉群里，如果看到感兴趣的 PR 就在[本项目](https://github.com/servicemesher/istio-official-translation)中对应的 issue 回复一下，我们社区的 maintainer 会通过 `/assign`命令手动将Review工作指派给您。
+
+**Review的基本流程**
+- 打开PR提交的中文翻译，并找到对应issue中指定的源文件，逐段进行走查；
+  - 词汇检查：检查译文中出现的术语、常用词汇是否遵照了术语表的要求进行翻译；
+  - 格式检查：对照原文，检查译文中的标题和层次是否对应；代码块是否指定了语言；标点符号是否正确且无英文标点；超链接、图片链接是否可达；是否有错别字；
+  - 语句检查：分段落通读一遍，检查是否有不通顺、语病、或者不符合中文习惯的译文（啰嗦、重复、过多的助词等）
+- 根据发现的问题，在PR提交文件的对应行添加comment，格式为`原译文=>修改后译文`；不确定的地方可加建议或询问，或发到协作群求助。
 
 #### Step7：任务完成
 
