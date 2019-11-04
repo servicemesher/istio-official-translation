@@ -114,14 +114,14 @@ Press Ctrl+C to stop
 
 另外一种是直接使用docker镜像启动。
 
-运行`docker pull gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`下载镜像。如果您的网络环境无法访问此资源，可以执行下面的命令下载替代镜像：
+运行`docker pull gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`下载镜像，然后在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，执行`make serve`启动web服务器。
 
+如果您的网络环境无法访问此资源，可以执行下面的命令使用替代镜像启动web服务：
 ```
-docker pull jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
-docker tag jimmysong/istio-testing-build-tools:2019-10-24T14-05-17 gcr.io/istio-testing/build-tools:2019-10-24T14-05-17
+make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
 ```
 
-接下来，在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，运行`make serve`启动web服务器，启动成功后通过`http://localhost:1313/zh`进行网站的预览。
+启动成功后通过`http://localhost:1313/zh`进行网站的预览。
 
 注：如果无法看到中文页面，先检查根目录下的config.toml文件中的中文配置是否已打开：
 
@@ -205,7 +205,7 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 >解决方法：
 
 1. 在项目根目录下执行`sh scripts/build_site.sh`命令，即可生成所需静态文件。但是这种方式需要安装比较多`node`的命令行工具，例如：`sass`、`tsc`、`babel`、`svgstore`，安装起来比较繁琐。
-2. 这里建议首次可以采用`docker`方式启动，参考下面的教程，拉取`gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`镜像，然后运行`make serve`启动，启动时docker镜像会在项目目录中生成`generated`、`tmp`和`resources`静态资源目录。
+2. 这里建议首次可以采用`docker`方式启动，参考docker启动教程，在Istio[网站仓库的根目录](https://github.com/istio/istio.io)运行`make serve`启动，如果您的网络环境无法访问此资源，请使用`make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17`命令，启动时docker镜像会在项目目录中生成`generated`、`tmp`和`resources`静态资源目录。
 3. 在初次生成静态资源目录后，就可以正常使用`hugo server`来启动项目了。
 
 #### 文档更新了怎么办？
