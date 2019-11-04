@@ -194,6 +194,20 @@ ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID
 2. `/pushed`: 适用于 `translating` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `pushed`
 3. `/merged`: 适用于 `pushed` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `finished`，然后关闭 Issue
 
+#### 初次使用hugo启动找不到静态资源问题：
+
+初次使用`hugo server`在本地启动web服务，web页面会出现如下问题，找不到静态资源。
+```
+Failed to load resource: the server responded with a status of 404 (Not Found)
+Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+```
+
+>解决方法：
+
+1. 在项目根目录下执行`sh scripts/build_site.sh`命令，即可生成所需静态文件。但是这种方式需要安装比较多`node`的命令行工具，例如：`sass`、`tsc`、`babel`、`svgstore`，安装起来比较繁琐。
+2. 这里建议首次可以采用`docker`方式启动，参考下面的教程，拉取`gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`镜像，然后运行`make serve`启动，启动时docker镜像会在项目目录中生成`generated`、`tmp`和`resources`静态资源目录。
+3. 在初次生成静态资源目录后，就可以正常使用`hugo server`来启动项目了。
+
 #### 文档更新了怎么办？
 
 如果发现文档更新，并且根据文档名称在 [Issue 库](https://github.com/servicemesher/istio-official-translation/issues)中找不到对应的 Issue，可以 [新建 Issue](https://github.com/servicemesher/istio-official-translation/issues/new)，Issue 标题写入变更的文件名，例如 `content/docs/reference/config/policy-and-telemetry/adapters/_index.md`，并在 Body 中加入 `@dustise, @rootsongjc`。这样就可以避免在你进行翻译的同时，Bot 重新将该文件放入任务队列。
