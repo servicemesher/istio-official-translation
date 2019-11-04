@@ -70,7 +70,7 @@
 
 #### Step3：翻译
 
-- 请随时参考[约定和术语表](https://github.com/servicemesher/istio-official-translation/issues/77)，若对某些词汇的翻译模棱两可，可以直接回复该 Issue，或者在钉钉群请求帮助。
+- 请随时参考[翻译约定和术语表](term.md)，若对某些词汇的翻译模棱两可，可以直接回复该 Issue，或者在钉钉群请求帮助。
 
 - 文档由若干 `md` 和 `html` 文档构成，将issue中给出的原始文件复制一份到对应中文目录下进行翻译。
 
