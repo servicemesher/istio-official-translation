@@ -35,7 +35,7 @@
 - 为保证翻译的统一性和准确性，请在翻译前仔细阅读[术语表](term.md)
   - 常用词汇：对常见的技术词汇给出统一的翻译；
   - 术语：文档中出现的专有技术名词，关键词，**保持原文不翻译；**
-  
+
 - 仓库和分支管理
   - fork[官网](https://github.com/istio/istio.io)的仓库，并作为自己仓库的上游： `git remote add upstream` ；
   - 在自己的仓库，也就是origin上进行翻译；
@@ -122,16 +122,6 @@ make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
 ```
 
 启动成功后通过`http://localhost:1313/zh`进行网站的预览。
-
-注：如果无法看到中文页面，先检查根目录下的config.toml文件中的中文配置是否已打开：需要将[config.toml](https://github.com/istio/istio.io/blob/master/config.toml)文件中的中文配置打开（取消原来的`#`注释符）：
-
-  ```yaml
-  [languages]
-      [languages.zh]
-          contentDir = "content/zh"
-      [languages.en]
-          contentDir = "content/en"
-  ```
 
 #### Step5：提交PR
 
