@@ -35,7 +35,7 @@
 - 为保证翻译的统一性和准确性，请在翻译前仔细阅读[术语表](term.md)
   - 常用词汇：对常见的技术词汇给出统一的翻译；
   - 术语：文档中出现的专有技术名词，关键词，**保持原文不翻译；**
-  
+
 - 仓库和分支管理
   - fork[官网](https://github.com/istio/istio.io)的仓库，并作为自己仓库的上游： `git remote add upstream` ；
   - 在自己的仓库，也就是origin上进行翻译；
@@ -75,7 +75,7 @@
 - 文档由若干 `md` 和 `html` 文档构成，将issue中给出的原始文件复制一份到对应中文目录下进行翻译。
 
 - 译文中的英文与中文建议用空格分隔,可以使用这个[自动化中英文格式化 md 的软件](https://pypi.org/project/zhlint/)。
-- 对于长文章翻译要注意锚点链接不要移除，例如 `[Server](#Client)` 翻译成 `[服务器](#Client)` 锚点链接保留，但不翻译。
+- 锚点：所有的标题都要补充英文锚点，如英文标题为`What is a service mesh?`，则中文翻译的标题应该为`什么是服务网格？{#what-is-a-service-mesh}`。其中锚点及所有英文单词小写，空格以连字符替代。如遇到复杂格式，可以在<https://istio.io>对应页面查看英文锚点。
 - `md` 代码块与代码输出内容不要翻译。
 - 对于翻译文稿中涉及到的静态文件，直接沿用英文版的文件（例如 `![english image](/docs/concept.....)`），不再需要自行拷贝。
 
@@ -123,18 +123,6 @@ make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
 
 启动成功后通过`http://localhost:1313/zh`进行网站的预览。
 
-注：如果无法看到中文页面，先检查根目录下的config.toml文件中的中文配置是否已打开：
-
-- 首先需要将[config.toml](https://github.com/istio/istio.io/blob/master/config.toml)文件中的中文配置打开（取消原来的`#`注释符），否则将无法预览中文部分的文档：
-
-  ```yaml
-  [languages]
-      [languages.zh]
-          contentDir = "content/zh"
-      [languages.en]
-          contentDir = "content/en"
-  ```
-
 #### Step5：提交PR
 
 执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
@@ -179,6 +167,19 @@ ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID
 - 终审：负责对翻译的文档做概要性的检查，聚焦在行文的通顺性、一致性、符合中文语言习惯，词汇、术语准确。终审通过后由管理员approve当前PR，就可以进行合并了。
 
 **参与Review**：所有 istio.io 的 PR都会通过 Github 机器人同步在钉钉群里，如果看到感兴趣的 PR 就在[本项目](https://github.com/servicemesher/istio-official-translation)中对应的 issue 回复一下，我们社区的 maintainer 会通过 `/assign`命令手动将Review工作指派给您。
+
+**Review的基本流程**
+
+- 认领Review：
+  - 新提交的PR每天会在协作群发布，供大家认领；
+  - 进入要认领的PR，回复/review，maintainer会将reviewer指派给您；
+- Review重点：
+  - 打开PR提交的中文翻译，并找到对应issue中指定的源文件，逐段进行走查；
+  - 词汇检查：检查译文中出现的术语、常用词汇是否遵照了术语表的要求进行翻译；
+  - 格式检查：对照原文，检查译文中的标题和层次是否对应；代码块是否指定了语言；标点符号是否正确且无英文标点；超链接、图片链接是否可达；是否有错别字；
+  - 语句检查：分段落通读一遍，检查是否有不通顺、语病、或者不符合中文习惯的译文（啰嗦、重复、过多的助词等）
+- 提交comment：
+  - 根据发现的问题，在PR提交文件的对应行添加comment，格式为`原译文=>修改后译文`；不确定的地方可加建议或询问，或发到协作群求助。
 
 #### Step7：任务完成
 
