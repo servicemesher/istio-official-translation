@@ -187,6 +187,10 @@ ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID
 
 ## FAQ
 
+术语、词汇翻译问题回复[这里](https://github.com/servicemesher/istio-official-translation/issues/77)。
+
+CI报错等其他问题回复[这里](https://github.com/servicemesher/istio-official-translation/issues/1445)。
+
 #### 有哪些修改Issue的自动化命令？
 
 所有指令，都在 Issue 中以 Comment 的形式输入，仅对 Member 有效。如果出错或者不符合条件，不会有任何提示。
