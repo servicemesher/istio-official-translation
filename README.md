@@ -213,6 +213,38 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 
 如果发现文档更新，并且根据文档名称在 [Issue 库](https://github.com/servicemesher/istio-official-translation/issues)中找不到对应的 Issue，可以 [新建 Issue](https://github.com/servicemesher/istio-official-translation/issues/new)，Issue 标题写入变更的文件名，例如 `content/docs/reference/config/policy-and-telemetry/adapters/_index.md`，并在 Body 中加入 `@dustise, @rootsongjc`。这样就可以避免在你进行翻译的同时，Bot 重新将该文件放入任务队列。
 
+#### 定义的锚点报拼写错误
+
+给标题添加的锚点完全和官方英文的一致，报类似如下错误：
+
+![anchor err](https://user-images.githubusercontent.com/36752240/68187530-e0750280-ffe1-11e9-8878-887f1d0c03ca.png)
+
+主要的原因是在对于这些专有名词在`.spelling`文件中只定义了大写而没有定义小写导致。需要在`spelling`文件中添加对应的专有名词。
+
+#### CI deploy/netlify 报错
+
+本地make serve没问题，但官方的deploy/netlify报如下错误：
+
+```bash
+10:07:37 AM: added 35 packages from 9 contributors and audited 43 packages in 1.553s
+10:07:37 AM: found 0 vulnerabilities
+10:07:41 AM: TypeError: Cannot set property inList of [object Object] which has only a getter
+10:07:41 AM:     at PluginPass.exit (/opt/build/repo/node_modules/babel-plugin-minify-simplify/lib/index.js:549:40)
+10:07:41 AM:     at newFn (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/visitors.js:179:21)
+10:07:41 AM:     at NodePath._call (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:55:20)
+10:07:41 AM:     at NodePath.call (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:42:17)
+10:07:41 AM:     at NodePath.visit (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:99:8)
+10:07:41 AM:     at TraversalContext.visitQueue (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/context.js:112:16)
+10:07:41 AM:     at TraversalContext.visitSingle (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/context.js:84:19)
+10:07:41 AM:     at TraversalContext.visit (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/context.js:140:19)
+10:07:41 AM:     at Function.traverse.node (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/index.js:84:17)
+10:07:41 AM:     at NodePath.visit (/opt/buildhome/.nvm/versions/node/v12.8.0/lib/node_modules/@babel/core/node_modules/@babel/traverse/lib/path/context.js:97:18)
+10:07:41 AM: Makefile.core.mk:49: recipe for target 'netlify' failed
+10:07:41 AM: make: *** [netlify] Error 1
+```
+
+这是官方的一个[bug](https://github.com/istio/istio.io/pull/5379)，已经解决。
+
 ## 感谢
 
 感谢您的辛勤付出！相信在大家共同的努力下Istio和Service Mesh技术会更加蓬勃的发展！
