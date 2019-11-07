@@ -43,7 +43,7 @@
 - cleanup：清除
 - client-side load balancing：客户端负载均衡
 - cloud native：云原生
-- configure / configuartion：配置
+- configure / configuration：配置
 - container orchestration framework：容器编排框架
 - connection timeout：连接超时
 - control plane：控制平面
