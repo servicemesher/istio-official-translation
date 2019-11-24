@@ -75,7 +75,7 @@
 - 文档由若干 `md` 和 `html` 文档构成，将issue中给出的原始文件复制一份到对应中文目录下进行翻译。
 
 - 译文中的英文与中文建议用空格分隔,可以使用这个[自动化中英文格式化 md 的软件](https://pypi.org/project/zhlint/)。
-- 锚点：所有的标题都要补充英文锚点，如英文标题为`What is a service mesh?`，则中文翻译的标题应该为`什么是服务网格？{#what-is-a-service-mesh}`。其中锚点及所有英文单词小写，空格以连字符替代。如遇到复杂格式，可以在<https://istio.io>对应页面查看英文锚点。
+- 锚点：所有的标题都要补充英文锚点，如英文标题为`What is a service mesh?`，则中文翻译的标题应该为`服务网格是什么？{#what-is-a-service-mesh}`。一般情况下，锚点所有英文单词均小写，若执行 “make lint” 集成测试时拼写检查报错，允许首字母大写（如：Istio）或直接大写（如：IP），原因见下文解释。锚点中，原标题的空格以连字符“-”替代。如遇到复杂格式，可以在<https://istio.io>对应页面查看英文锚点。
 - `md` 代码块与代码输出内容不要翻译。
 - 对于翻译文稿中涉及到的静态文件，直接沿用英文版的文件（例如 `![english image](/docs/concept.....)`），不再需要自行拷贝。
 
@@ -223,7 +223,7 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 
 ![anchor err](https://user-images.githubusercontent.com/36752240/68187530-e0750280-ffe1-11e9-8878-887f1d0c03ca.png)
 
-主要的原因是在对于这些专有名词在`.spelling`文件中只定义了大写而没有定义小写导致。需要在`spelling`文件中添加对应的专有名词。
+主要的原因是在对于这些专有名词在`.spelling`文件中只定义了大写而没有定义小写导致。此时，请参考上文锚点规范书写锚点。
 
 #### CI deploy/netlify 报错
 
