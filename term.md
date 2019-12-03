@@ -18,7 +18,44 @@
 
 **请不要翻译英文锚点。**
 
-所有的中文标题都要补充英文锚点，如英文标题为 `Before you begin`，则中文翻译的标题应该为`开始之前{#before-you-begin}`，其中锚点及所有英文单词的小写，空格以连字符替代，如遇到复杂格式，请在 <https://istio.io> 上要翻译的英文原文查看英文锚点。
+所有的中文标题都要补充英文锚点，如英文标题为 `Before you begin`，则中文翻译的标题应该为`开始之前{#before-you-begin}`，其中锚点及所有英文单词的小写，空格以连字符替代。
+
+下面是一些锚点的例子，这里只讨论锚点 `{#}` 里面的内容，如遇到复杂格式，请在 [Istio](https://istio.io) 上找到要翻译的英文原文查看英文锚点。
+
+#### 特殊名词
+
+`TCP` `TLS` `DNS` 等名词由于拼写检查的原因，保持大写，该规则仅限于中文文档。
+
+### 连写单词
+
+多个单词连写，视作单个单词，如：
+
+`` AppSwitch `DaemonSet` `` -> `appswitch-daemonset`，[参考链接](https://istio.io/blog/2018/delayering-istio/#appswitch-daemonset)
+
+#### 忽略字符
+
+`,` `:` `+` `"` `` ` ``(反引号) 等字符直接忽略，如：
+
+`Zero-cost load balancer, firewall and network analyzer` -> `zero-cost-load-balancer-firewall-and-network-analyzer`，[参考链接](https://istio.io/blog/2018/delayering-istio/#zero-cost-load-balancer-firewall-and-network-analyzer)
+
+`The solution: secure control of egress traffic` -> `the-solution-secure-control-of-egress-traffic`，[参考链接](https://istio.io/blog/2019/egress-traffic-control-in-istio-part-1/#the-solution-secure-control-of-egress-traffic)
+
+`Namespace level segmentation via RBAC + conditions` -> `namespace-level-segmentation-via-rbac-conditions`，[参考链接](https://istio.io/blog/2018/istio-authorization/#namespace-level-segmentation-via-rbac-conditions)
+
+`“Sidecar-aware” applications` -> `sidecar-aware-applications`，[参考链接](https://istio.io/blog/2018/delayering-istio/#sidecar-aware-applications)
+
+`` AppSwitch `DaemonSet` `` -> `appswitch-daemonset`，[参考链接](https://istio.io/blog/2018/delayering-istio/#appswitch-daemonset)
+  
+#### 分隔符
+
+`.` `/` `'`(单引号) 等字符都分割为两个单词，并用中划线 `-` 连接，如：
+
+`Istio 1.1 performance enhancements` -> `istio-1-1-performance-enhancements`，[参考连接](https://istio.io/blog/2019/istio1.1_perf/#istio-1-1-performance-enhancements)
+
+`Google Cloud Pub/Sub` -> `google-cloud-pub-sub`，[参考链接](https://istio.io/blog/2018/export-logs-through-stackdriver/#google-cloud-pub-sub)
+
+`It’s not just about performance` -> `it-s-not-just-about-performance`，[参考连接](https://istio.io/blog/2018/delayering-istio/#it-s-not-just-about-performance)
+ 
 
 ## 关于文章头信息
 
