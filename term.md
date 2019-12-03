@@ -40,37 +40,37 @@
 
 2.如果该标题部分需要翻译，添加的锚点忽略使用反引号 `` ` `` 包裹的部分，如：
 
-`` `Istioctl` auto-completion `` -> `auto-completion`，完整标题类似于：``## `Istioctl` 自动补全{#auto-completion} ``，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl/#auto-completion)。
+`` `Istioctl` auto-completion `` -> `auto-completion`，完整标题：``## `Istioctl` 自动补全{#auto-completion} ``，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl/#auto-completion)。
 
 3.使用 `` ` `` (反引号) 包裹的 `短语`，此时可以将其视作 `忽略字符`，如：
 
-`` `no such hosts` or `no endpoints available` errors in deployment status `` -> `no-such-hosts-or-no-endpoints-available-errors-in-deployment-status`，[参考链接](https://preliminary.istio.io/zh/docs/ops/common-problems/injection/#no-such-hosts-or-no-endpoints-available-errors-in-deployment-status)。
+`` `no such hosts` or `no endpoints available` `` -> `no-such-hosts-or-no-endpoints-available`，[参考链接](https://preliminary.istio.io/zh/docs/ops/common-problems/injection/#no-such-hosts-or-no-endpoints-available-errors-in-deployment-status)。
 
 #### 忽略字符
 
 `,` `:` `+` `"` `?` `&` 等字符直接忽略，如：
 
-`Zero-cost load balancer, firewall and network analyzer` -> `zero-cost-load-balancer-firewall-and-network-analyzer`，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl-analyze/#analyzing-live-clusters-local-files-or-both)。
+`Zero-cost load balancer, firewall` -> `zero-cost-load-balancer-firewall`，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl-analyze/#analyzing-live-clusters-local-files-or-both)。
 
-`The solution: secure control of egress traffic` -> `the-solution-secure-control-of-egress-traffic`，[参考链接](https://istio.io/blog/2019/egress-traffic-control-in-istio-part-1/#the-solution-secure-control-of-egress-traffic)。
+`The solution: secure control` -> `the-solution-secure-control`，[参考链接](https://istio.io/blog/2019/egress-traffic-control-in-istio-part-1/#the-solution-secure-control-of-egress-traffic)。
 
-`Namespace level segmentation via RBAC + conditions` -> `namespace-level-segmentation-via-rbac-conditions`，[参考链接](https://istio.io/blog/2018/istio-authorization/#namespace-level-segmentation-via-rbac-conditions)。
+`RBAC + conditions` -> `rbac-conditions`，[参考链接](https://istio.io/blog/2018/istio-authorization/#namespace-level-segmentation-via-rbac-conditions)。
 
 `“Sidecar-aware” applications` -> `sidecar-aware-applications`，[参考链接](https://istio.io/blog/2018/delayering-istio/#sidecar-aware-applications)。
 
-`So what’s the net?` -> `so-what-s-the-net`，[参考链接](https://istio.io/blog/2018/delayering-istio/#so-what-s-the-net)。
+`So what’s the net?` -> `so-what-is-the-net`，[参考链接](https://istio.io/blog/2018/delayering-istio/#so-what-s-the-net)。
 
 `Q&A` -> `q-a`，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl-analyze/#q-a)。
   
 #### 分隔符
 
-`.` `/` `'`(单引号) 等字符视作分隔符，将单词分割为两个单词，并用中划线 `-` 连接，如：
+`.` `/` `'`(单引号) 等字符视作分隔符，将单词分割为两个单词，并用中划线 `-` 连接，其中单引号 `'` 分隔的简写单词，需写完整。如：
 
 `Istio 1.1 performance enhancements` -> `istio-1-1-performance-enhancements`，[参考连接](https://istio.io/blog/2019/istio1.1_perf/#istio-1-1-performance-enhancements)。
 
 `Google Cloud Pub/Sub` -> `google-cloud-pub-sub`，[参考链接](https://istio.io/blog/2018/export-logs-through-stackdriver/#google-cloud-pub-sub)。
 
-`It’s not just about performance` -> `it-s-not-just-about-performance`，[参考连接](https://istio.io/blog/2018/delayering-istio/#it-s-not-just-about-performance)。
+`It’s not just about performance` -> `it-is-not-just-about-performance`。
 
 ## 关于文章头信息
 
