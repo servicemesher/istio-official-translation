@@ -18,7 +18,59 @@
 
 **请不要翻译英文锚点。**
 
-所有的中文标题都要补充英文锚点，如英文标题为 `Before you begin`，则中文翻译的标题应该为`开始之前{#before-you-begin}`，其中锚点及所有英文单词的小写，空格以连字符替代，如遇到复杂格式，请在 <https://istio.io> 上要翻译的英文原文查看英文锚点。
+所有的中文标题都要补充英文锚点，如英文标题为 `Before you begin`，则中文翻译的标题应该为`开始之前{#before-you-begin}`，其中锚点及所有英文单词的小写，空格以连字符替代。
+
+下面是一些锚点的例子，这里主要讨论锚点 `{#}` 里面的内容，如遇到复杂格式，请在 [Istio](https://istio.io) 上找到要翻译的英文原文查看英文锚点。
+
+#### 专有名词
+
+`TLS` `Delayering` `RPCs` 等专有名词，由于拼写检查的原因，在添加锚点时，请保持原文，该规则仅限于中文文档。
+
+`TCP` `AppSwitch` 等专有名词，由于同时存在对应的小写专有名词：`tcp` `appswitch`，在添加锚点时，可以修改为小写。
+
+完整的专有名词列表请参考：[.spelling](https://github.com/istio/istio.io/blob/master/.spelling)。
+
+#### 符号名词
+
+使用 `` ` `` (反引号) 包裹的名词，这种名词一般不翻译、不能通过拼写检查、且不在 `专有名词` 列表内，所以需要将其包裹在 `` ` `` 内，如：`Kubectl` `Istioctl` `DaemonSet` 等，此时处理锚点分为以下几种情况：
+
+1.如果该标题整体不需要翻译，请保持原文，Istio 会自动生成正确的锚点，如：
+
+`` AppSwitch `DaemonSet` `` 自动生成 -> `appswitch-daemonset`，[参考链接](https://istio.io/blog/2018/delayering-istio/#appswitch-daemonset)。
+
+2.如果该标题部分需要翻译，添加的锚点忽略使用反引号 `` ` `` 包裹的部分，如：
+
+`` `Istioctl` auto-completion `` -> `auto-completion`，完整标题：``## `Istioctl` 自动补全{#auto-completion} ``，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl/#auto-completion)。
+
+3.使用 `` ` `` (反引号) 包裹的 `短语` 和确定 `无拼写` 错误的名词，此时可以将其视作 `忽略字符`，如：
+
+`` `no such hosts` or `no endpoints available` `` -> `no-such-hosts-or-no-endpoints-available`，[参考链接](https://preliminary.istio.io/zh/docs/ops/common-problems/injection/#no-such-hosts-or-no-endpoints-available-errors-in-deployment-status)。
+
+#### 忽略字符
+
+`,` `:` `+` `"` `?` `&` 等字符直接忽略，如：
+
+`Zero-cost load balancer, firewall` -> `zero-cost-load-balancer-firewall`，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl-analyze/#analyzing-live-clusters-local-files-or-both)。
+
+`The solution: secure control` -> `the-solution-secure-control`，[参考链接](https://istio.io/blog/2019/egress-traffic-control-in-istio-part-1/#the-solution-secure-control-of-egress-traffic)。
+
+`RBAC + conditions` -> `rbac-conditions`，[参考链接](https://istio.io/blog/2018/istio-authorization/#namespace-level-segmentation-via-rbac-conditions)。
+
+`“Sidecar-aware” applications` -> `sidecar-aware-applications`，[参考链接](https://istio.io/blog/2018/delayering-istio/#sidecar-aware-applications)。
+
+`So what’s the net?` -> `so-what-is-the-net`，[参考链接](https://istio.io/blog/2018/delayering-istio/#so-what-s-the-net)。
+
+`Q&A` -> `q-a`，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl-analyze/#q-a)。
+  
+#### 分隔符
+
+`.` `/` `'`(单引号) 等字符视作分隔符，将单词分割为两个单词，并用中划线 `-` 连接，其中单引号 `'` 分隔的简写单词，需写完整。如：
+
+`Istio 1.1 performance enhancements` -> `istio-1-1-performance-enhancements`，[参考连接](https://istio.io/blog/2019/istio1.1_perf/#istio-1-1-performance-enhancements)。
+
+`Google Cloud Pub/Sub` -> `google-cloud-pub-sub`，[参考链接](https://istio.io/blog/2018/export-logs-through-stackdriver/#google-cloud-pub-sub)。
+
+`It’s not just about performance` -> `it-is-not-just-about-performance`。
 
 ## 关于文章头信息
 
