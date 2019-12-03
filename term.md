@@ -42,7 +42,7 @@
 
 `` `Istioctl` auto-completion `` -> `auto-completion`，完整标题：``## `Istioctl` 自动补全{#auto-completion} ``，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl/#auto-completion)。
 
-3.使用 `` ` `` (反引号) 包裹的 `短语`，此时可以将其视作 `忽略字符`，如：
+3.使用 `` ` `` (反引号) 包裹的 `短语` 和确定 `无拼写` 错误的名词，此时可以将其视作 `忽略字符`，如：
 
 `` `no such hosts` or `no endpoints available` `` -> `no-such-hosts-or-no-endpoints-available`，[参考链接](https://preliminary.istio.io/zh/docs/ops/common-problems/injection/#no-such-hosts-or-no-endpoints-available-errors-in-deployment-status)。
 
