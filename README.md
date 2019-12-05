@@ -249,6 +249,14 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 
 这是官方的一个[bug](https://github.com/istio/istio.io/pull/5379)，已经解决。
 
+#### CLA检测不通过
+
+如果你在设置cla之前提交了PR，CI里的cla check会失败。可以先在PR中回复`@googlebot I signed it.`。如果还失败尝试回复`@googlebot I fixed it.`。如果还不行，所以最好的办法是关闭当前PR，重新用一个新的branch拷贝相应文件，再提交全新的PR即可。
+
+#### ERROR: Unexpected end tag : p
+
+如果遇到此错误，说明还没有完全修复markdown的lint问题。需要先修复完即可通过CI检查。
+
 ## 感谢
 
 感谢您的辛勤付出！相信在大家共同的努力下Istio和Service Mesh技术会更加蓬勃的发展！
