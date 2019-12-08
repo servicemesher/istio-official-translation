@@ -96,9 +96,9 @@
 
 因为该命令使用到了`gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`镜像，如果您无法访问此资源，可以执行下面的命令下载替代镜像，然后再执行`make lint`检查：
 
-```
-docker pull jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
-docker tag jimmysong/istio-testing-build-tools:2019-10-24T14-05-17 gcr.io/istio-testing/build-tools:2019-10-24T14-05-17
+```bash
+docker pull jimmysong/istio-testing-build-tools:master-2019-12-05T22-22-12
+docker tag jimmysong/istio-testing-build-tools:master-2019-12-05T22-22-12 gcr.io/istio-testing/build-tools:master-2019-12-05T22-22-12
 ```
 
 **提交PR**
