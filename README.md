@@ -129,9 +129,9 @@ make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
 
 > 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
 
-```
-docker pull jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
-docker tag jimmysong/istio-testing-build-tools:2019-10-24T14-05-17 gcr.io/istio-testing/build-tools:2019-10-24T14-05-17
+```bash
+docker pull jimmysong/istio-testing-build-tools:master-2019-12-05T22-22-12
+docker tag jimmysong/istio-testing-build-tools:master-2019-12-05T22-22-12 gcr.io/istio-testing/build-tools:master-2019-12-05T22-22-12
 ```
 
 **提交PR**
