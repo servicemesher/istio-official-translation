@@ -114,11 +114,11 @@ Press Ctrl+C to stop
 
 另外一种是直接使用docker镜像启动。
 
-运行`docker pull gcr.io/istio-testing/build-tools:2019-10-24T14-05-17`下载镜像，然后在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，执行`make serve`启动web服务器。
+运行`docker pull gcr.io/istio-testing/build-tools:master-2019-12-05T22-22-12`下载镜像，然后在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，执行`make serve`启动web服务器。
 
 如果您的网络环境无法访问此资源，可以执行下面的命令使用替代镜像启动web服务：
 ```
-make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17
+make serve IMG=jimmysong/istio-testing-build-tools:master-2019-12-05T22-22-12
 ```
 
 启动成功后通过`http://localhost:1313/zh`进行网站的预览。
