@@ -161,6 +161,30 @@
 - validate：验证
 - workload：工作负载
 - you：您
+- release note：发行说明
+- Announcing Istio x.x.x：Istio x.x.x 发布公告
+- Istio x.x.x announcement.：Istio x.x.x 公告
+- Istio x.x.x patch release.：Istio x.x.x 补丁发布
+- Major Update：重大更新
+- general：概况
+- known issues：已知问题
+- security：安全
+- security update：安全更新
+- other：其它
+- miscellaneous：杂项
+- Bug fixes：Bug 修复
+- small enhancements：小的改进
+- minor enhancements：次要改进
+- affected Istio releases：受影响的 Istio 版本
+- vulnerability impact：漏洞影响
+- mitigation：防范
+- behavior change：行为变更
+- features：特性/特征
+- new：新增
+- add：添加
+- modified：修改
+- removed：移除
+- operator：运维人员（指人时）
 
 ## 术语
 
