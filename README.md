@@ -1,24 +1,24 @@
-# Istio官方文档翻译指导手册
+# Istio 官方文档翻译指导手册
 
 ## 概要
 
-2018年我们社区组织翻译了Istio官网文档的1.2版本（已归档于：<https://archive.istio.io/v1.2/zh/>），随着Istio版本的快速迭代，老版本有许多需要更新的地方。为了让国内对Istio感兴趣的工程师可以学习到最新的官方文档，我们打算重启翻译工作，并基于官方的主线分支进行翻译，保证每次Istio在发布新版本时，同步的发布中文文档。
+2018 年我们社区组织翻译了 Istio 官网文档的 1.2 版本（已归档于：<https://archive.istio.io/v1.2/zh/>），随着 Istio 版本的快速迭代，老版本有许多需要更新的地方。为了让国内对 Istio 感兴趣的工程师可以学习到最新的官方文档，我们打算重启翻译工作，并基于官方的主线分支进行翻译，保证每次 Istio 在发布新版本时，同步的发布中文文档。
 
-感谢您加入我们的翻译团队，并为Istio的中文化工作作出贡献。本篇文档是帮助您进行高效翻译的指导手册，建议您在正式翻译前认真阅读。
+感谢您加入我们的翻译团队，并为 Istio 的中文化工作作出贡献。本篇文档是帮助您进行高效翻译的指导手册，建议您在正式翻译前认真阅读。
 
 ## 基本流程
 
 整个翻译的基本流程包括下面几个步骤：
 
-- 任务领取：在本仓库的Issue页面领取待翻译的任务；
+- 任务领取：在本仓库的 Issue 页面领取待翻译的任务；
 - 翻译：根据任务提示进行翻译工作；
-- 提交：翻译人员提交PR等待review；
-- 校对：其他翻译人员对当前任务进行review；
+- 提交：翻译人员提交 PR 等待 review；
+- 校对：其他翻译人员对当前任务进行 review；
 - 终审：管理员团队对翻译内容进行最后确认；
 - 预览：和源文档进行比对，查看显示效果；
-- 合并：merge进入官方仓库，任务结束。
+- 合并：merge 进入官方仓库，任务结束。
 
-我们通过校对、终审两轮review保证翻译的质量；通过预览保证显示的准确性。翻译人员在整个流程中需要做的是领取任务，翻译，提交PR，预览自查这几步。
+我们通过校对、终审两轮 review 保证翻译的质量；通过预览保证显示的准确性。翻译人员在整个流程中需要做的是领取任务，翻译，提交 PR，预览自查这几步。
 
 ## 翻译指南
 
@@ -26,9 +26,9 @@
 
 ### 准备工作
 
-- 账号：您需要先准备一个钉钉号和GitHub账号。钉钉用来协作和沟通，Github进行任务认领和翻译提交。
+- 账号：您需要先准备一个钉钉号和 GitHub 账号。钉钉用来协作和沟通，Github 进行任务认领和翻译提交。
 
-- 申请加入：请扫描下面的二维码加入钉钉协作群，通过审批后您需要登记一下基本信息（具体见群公告），之后管理员会将您添加到ServiceMesher的GitHub组织，即可正式参与翻译。
+- 申请加入：请扫描下面的二维码加入钉钉协作群，通过审批后您需要登记一下基本信息（具体见群公告），之后管理员会将您添加到 ServiceMesher 的 GitHub 组织，即可正式参与翻译。
 
   ![dingding](https://tva1.sinaimg.cn/large/006y8mN6ly1g8ffa1lksfj306b08cgm4.jpg)
 
@@ -37,26 +37,26 @@
   - 术语：文档中出现的专有技术名词，关键词，**保持原文不翻译；**
 
 - 仓库和分支管理
-  - fork[官网](https://github.com/istio/istio.io)的仓库，并作为自己仓库的上游： `git remote add upstream` ；
-  - 在自己的仓库，也就是origin上进行翻译；
-  - 一个任务新建一个branch；建议名称为：`zh-trans-<isssueID>`
+  - fork [官网](https://github.com/istio/istio.io)的仓库，并作为自己仓库的上游：`git remote add upstream` ；
+  - 在自己的仓库，也就是 origin 上进行翻译；
+  - 一个任务新建一个 branch；建议名称为：`zh-trans-<isssueID>`
 
 ### 翻译流程
 
 #### Step1：任务浏览
 
-访问[任务列表](https://github.com/servicemesher/istio-official-translation/issues)，会看到待领取任务（默认Open状态，label中带有`pending`字样）。通常情况下，您只需要关心状态和优先级两个label。
+访问[任务列表](https://github.com/servicemesher/istio-official-translation/issues)，会看到待领取任务（默认 Open 状态，label 中带有`pending`字样）。通常情况下，您只需要关心状态和优先级两个 label。
 
-**状态label：**
+**状态 label：**
 
 - `pending`：待领取的任务；
 - `translating`：已经有人领取，正在翻译的任务；
-- `pushed`：已翻译并生成PR，正在进行review；
-- `merged`：PR已合并，任务完成。
+- `pushed`：已翻译并生成 PR，正在进行 review；
+- `merged`：PR 已合并，任务完成。
 
-**优先级label：**
+**优先级 label：**
 
-- 优先级从高到低分别为priority/P0 ~ priority/P3。优先选择优先级高的进行翻译。
+- 优先级从高到低分别为 priority/P0 ~ priority/P3。优先选择优先级高的进行翻译。
 
 除此以外，我们还设置了版本号、中文标示和类型等标签。
 
@@ -64,35 +64,35 @@
 
 #### Step2：任务领取
 
-找到未经认领的任务（pending状态），在 issue 中回复 `/accept` 可以领取任务，Bot会将任务分配给你，并修改状态为translating。
+找到未经认领的任务（pending 状态），在 issue 中回复 `/accept` 可以领取任务，Bot 会将任务分配给你，并修改状态为 translating。
 
 > 注意：为保证质量，同一译者只能拥有三个 `translating` 状态的 Issue，超过数量无法继续认领。
 
 #### Step3：翻译
 
 - 请随时参考[翻译约定和术语表](term.md)，若对某些词汇的翻译模棱两可，可以直接回复该 Issue，或者在钉钉群请求帮助。
-- 文档由若干 `md` 和 `html` 文档构成，将issue中给出的原始文件复制一份到对应中文目录下进行翻译。
-- 译文中的英文与中文建议用空格分隔,可以使用这个[自动化中英文格式化 md 的软件](https://pypi.org/project/zhlint/)。
+- 文档由若干 `md` 和 `html` 文档构成，将 issue 中给出的原始文件复制一份到对应中文目录下进行翻译。
+- 译文中的英文与中文建议用空格分隔, 可以使用这个[自动化中英文格式化 md 的软件](https://pypi.org/project/zhlint/)。
 - 锚点：所有的标题都要补充英文锚点，如英文标题为`What is a service mesh?`，则中文翻译的标题应该为`服务网格是什么？{#what-is-a-service-mesh}`。锚点默认所有英文单词均小写，可以在 <https://istio.io> 对应的页面找到英文锚点并添加。但因为专有名词等原因，在使用`make lint`检查时，和英文页面一致的锚点会报错，可根据下面的规则进行修改：
   - 锚点以专有名词开头，都需要大写，比如`{#Istio...}`
-  - 打开repo根目录下 `.spelling` 文件，查找报错的锚点是否有定义。如果存在，直接使用文件中定义的形式即可（通常是大小写不同）；
+  - 打开 repo 根目录下 `.spelling` 文件，查找报错的锚点是否有定义。如果存在，直接使用文件中定义的形式即可（通常是大小写不同）；
   - 如果不存在，通常是由几个单词组合而成，将这几个词分别在 `.spelling`文件中查找对应的定义，并替换；并且在他们中间添加连字符`-`。例如：`{#Istio-CoreDNS-options}`。
   - 原标题中的空格以连字符`-`替代。
   - lint 会检查锚点中的单词拼写是否正确，这就导致一些缩写不合法。这种情况下在词之间添加`-`即可。例如：`certmanager`是不合法的，需要改成`{#cert-manager}`
   - 数字如果不在`.spelling`中需要更换格式
-  - 其他细节请参考[这里](term.md#关于锚点)
+  - 其他细节请参考[这里](term.md# 关于锚点)
 - `md` 代码块与代码输出内容不要翻译。
-- 对于翻译文稿中涉及到的静态文件，直接沿用英文版的文件（例如 `![english image](/docs/concept.....)`），不再需要自行拷贝。
+- 对于翻译文稿中涉及到的静态文件，直接沿用英文版的文件（例如 `! [english image](/docs/concept.....)`），不再需要自行拷贝。
 
 #### Step4：本地构建和预览
 
-翻译结束后可以先在本地构建网站进行预览。有两种方式可以将Istio的website运行起来：
+翻译结束后可以先在本地构建网站进行预览。有两种方式可以将 Istio 的 website 运行起来：
 
-**通过本地运行hugo启动**
+**通过本地运行 hugo 启动**
 
-hugo提供了一个本地的web服务器，可以启动网站。如果您本地没有安装hugo，可以去[这里](https://gohugo.io/getting-started/quick-start/)查看如何安装。
+hugo 提供了一个本地的 web 服务器，可以启动网站。如果您本地没有安装 hugo，可以去[这里](https://gohugo.io/getting-started/quick-start/)查看如何安装。
 
-然后，在Istio.io仓库的[根目录](https://github.com/istio/istio.io)下，运行`hugo server`在本地启动web服务器，通过`http://localhost:1313/zh`进行中文网站的预览。如看到类似下面的输出，则表示web服务器已经启动成功：
+然后，在 Istio.io 仓库的[根目录](https://github.com/istio/istio.io)下，运行`hugo server`在本地启动 web 服务器，通过`http://localhost:1313/zh`进行中文网站的预览。如看到类似下面的输出，则表示 web 服务器已经启动成功：
 
 ```text
                    | EN  | ZH
@@ -115,11 +115,11 @@ Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
 Press Ctrl+C to stop
 ```
 
-**通过Docker启动**
+**通过 Docker 启动**
 
-另外一种是直接使用docker镜像启动。
+另外一种是直接使用 docker 镜像启动。
 
-在正确安装Docker后，运行下面的命令下载镜像：
+在正确安装 Docker 后，运行下面的命令下载镜像：
 
 ```
 docker pull gcr.io/istio-testing/build-tools:master-2020-03-22T01-04-48 
@@ -132,7 +132,7 @@ docker pull qksl/istio-testing-build-tools:master-2020-03-22T01-04-48
 docker tag qksl/istio-testing-build-tools:master-2020-03-22T01-04-48 gcr.io/istio-testing/build-tools:master-2020-03-22T01-04-48
 ```
 
-然后在[istio.io 仓库的根目录](https://github.com/istio/istio.io)下，执行下面的命令启动web服务：
+然后在 [istio.io 仓库的根目录](https://github.com/istio/istio.io)下，执行下面的命令启动 web 服务：
 
 ```
 make serve 
@@ -140,7 +140,7 @@ make serve
 
 启动成功后通过 `http://localhost:1313/zh` 进行网站的预览。
 
-如果你想通过局域网访问该页面，可以将 `Makefile.core.mk` 文件中的 `ISTIO_SERVE_DOMAIN ?= localhost` 修改为 `ISTIO_SERVE_DOMAIN ?= 局域网 IP`，然后再启动web服务：
+如果你想通过局域网访问该页面，可以将 `Makefile.core.mk` 文件中的 `ISTIO_SERVE_DOMAIN ?= localhost` 修改为 `ISTIO_SERVE_DOMAIN ?= 局域网 IP`，然后再启动 web 服务：
 
 ```
 make serve 
@@ -150,15 +150,15 @@ make serve
 
 启动成功后通过 `http://局域网 IP:1313/zh` 进行网站的预览。
 
-#### Step5：提交PR
+#### Step5：提交 PR
 
 执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
 
 > 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
 
-**提交PR**
+**提交 PR**
 
-如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。为方便管理和辨识，请遵守下面的模板定义您的PR：
+如果检查通过，就可以向 [Istio 官方网站提交 PR](https://github.com/istio/istio.github.io/pulls)，PR 被合并后就可以通过 [Istio 网站预览页面](https://preliminary.istio.io/zh/)看到被合并后的页面。为方便管理和辨识，请遵守下面的模板定义您的 PR：
 
 ```text
 标题：
@@ -177,43 +177,43 @@ ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID
 [ ] Developer Infrastructure
 ```
 
-其中，标题中的<file_full_path>是翻译的源文件路径；内容中的ref是当前翻译任务的issue链接。
+其中，标题中的<file_full_path>是翻译的源文件路径；内容中的 ref 是当前翻译任务的 issue 链接。
 
 #### Step6：校对（review）
 
-校对工作由没有翻译过当前文档的其他翻译人员执行，即翻译人员互为校对人员。为保证质量，我们设置了两轮Review：
+校对工作由没有翻译过当前文档的其他翻译人员执行，即翻译人员互为校对人员。为保证质量，我们设置了两轮 Review：
 
 所有翻译人员互为校对人员，分配一个翻译任务同时要确定校对任务；
 
 - 初审：负责对翻译的内容和原文较为精细的进行对比，保证语句通顺，无明显翻译错误；
-- 终审：负责对翻译的文档做概要性的检查，聚焦在行文的通顺性、一致性、符合中文语言习惯，词汇、术语准确。终审通过后由管理员approve当前PR，就可以进行合并了。
+- 终审：负责对翻译的文档做概要性的检查，聚焦在行文的通顺性、一致性、符合中文语言习惯，词汇、术语准确。终审通过后由管理员 approve 当前 PR，就可以进行合并了。
 
-**参与Review**：所有 istio.io 的 PR都会通过 Github 机器人同步在钉钉群里，如果看到感兴趣的 PR 就在[本项目](https://github.com/servicemesher/istio-official-translation)中对应的 issue 回复一下，我们社区的 maintainer 会通过 `/assign`命令手动将Review工作指派给您。
+**参与 Review**：所有 istio.io 的 PR 都会通过 Github 机器人同步在钉钉群里，如果看到感兴趣的 PR 就在[本项目](https://github.com/servicemesher/istio-official-translation)中对应的 issue 回复一下，我们社区的 maintainer 会通过 `/assign`命令手动将 Review 工作指派给您。
 
-**Review的基本流程**
+**Review 的基本流程**
 
-- 认领Review：
-  - 新提交的PR每天会在协作群发布，供大家认领；
-  - 进入要认领的PR，回复/review，maintainer会将reviewer指派给您；
-- Review重点：
-  - 打开PR提交的中文翻译，并找到对应issue中指定的源文件，逐段进行走查；
+- 认领 Review：
+  - 新提交的 PR 每天会在协作群发布，供大家认领；
+  - 进入要认领的 PR，回复/review，maintainer 会将 reviewer 指派给您；
+- Review 重点：
+  - 打开 PR 提交的中文翻译，并找到对应 issue 中指定的源文件，逐段进行走查；
   - 词汇检查：检查译文中出现的术语、常用词汇是否遵照了术语表的要求进行翻译；
   - 格式检查：对照原文，检查译文中的标题和层次是否对应；代码块是否指定了语言；标点符号是否正确且无英文标点；超链接、图片链接是否可达；是否有错别字；
   - 语句检查：分段落通读一遍，检查是否有不通顺、语病、或者不符合中文习惯的译文（啰嗦、重复、过多的助词等）
-- 提交comment：
-  - 根据发现的问题，在PR提交文件的对应行添加comment，格式为`原译文=>修改后译文`；不确定的地方可加建议或询问，或发到协作群求助。
+- 提交 comment：
+  - 根据发现的问题，在 PR 提交文件的对应行添加 comment，格式为`原译文=>修改后译文`；不确定的地方可加建议或询问，或发到协作群求助。
 
 #### Step7：任务完成
 
-通过终审后的任务会被管理员approve，并合并到Istio的官方仓库中。需要您在对应的 Issue 中输入指令 `/merged`，Bot 会设置 Issue 的状态为 `finished`，并关闭 Issue。整个翻译任务就算正式完成了。您可以继续领取新的任务进行翻译，或参与校对工作。
+通过终审后的任务会被管理员 approve，并合并到 Istio 的官方仓库中。需要您在对应的 Issue 中输入指令 `/merged`，Bot 会设置 Issue 的状态为 `finished`，并关闭 Issue。整个翻译任务就算正式完成了。您可以继续领取新的任务进行翻译，或参与校对工作。
 
 ## FAQ
 
 术语、词汇翻译问题回复[这里](https://github.com/servicemesher/istio-official-translation/issues/77)。
 
-CI报错等其他问题回复[这里](https://github.com/servicemesher/istio-official-translation/issues/1445)。
+CI 报错等其他问题回复[这里](https://github.com/servicemesher/istio-official-translation/issues/1445)。
 
-#### 有哪些修改Issue的自动化命令？
+#### 有哪些修改 Issue 的自动化命令？
 
 所有指令，都在 Issue 中以 Comment 的形式输入，仅对 Member 有效。如果出错或者不符合条件，不会有任何提示。
 
@@ -221,9 +221,9 @@ CI报错等其他问题回复[这里](https://github.com/servicemesher/istio-off
 2. `/pushed`: 适用于 `translating` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `pushed`
 3. `/merged`: 适用于 `pushed` 状态的 Issue，输入该指令，会将该 Issue 指派给当前用户。并变更状态为 `finished`，然后关闭 Issue
 
-#### 初次使用hugo启动找不到静态资源问题：
+#### 初次使用 hugo 启动找不到静态资源问题：
 
-初次使用`hugo server`在本地启动web服务，web页面会出现如下问题，找不到静态资源。
+初次使用`hugo server`在本地启动 web 服务，web 页面会出现如下问题，找不到静态资源。
 ```
 Failed to load resource: the server responded with a status of 404 (Not Found)
 Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.
@@ -232,12 +232,12 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 >解决方法：
 
 1. 在项目根目录下执行`sh scripts/build_site.sh`命令，即可生成所需静态文件。但是这种方式需要安装比较多`node`的命令行工具，例如：`sass`、`tsc`、`babel`、`svgstore`，安装起来比较繁琐。
-2. 这里建议首次可以采用`docker`方式启动，参考docker启动教程，在Istio[网站仓库的根目录](https://github.com/istio/istio.io)运行`make serve`启动，如果您的网络环境无法访问此资源，请使用`make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17`命令，启动时docker镜像会在项目目录中生成`generated`、`tmp`和`resources`静态资源目录。
+2. 这里建议首次可以采用`docker`方式启动，参考 docker 启动教程，在 Istio [网站仓库的根目录](https://github.com/istio/istio.io)运行`make serve`启动，如果您的网络环境无法访问此资源，请使用`make serve IMG=jimmysong/istio-testing-build-tools:2019-10-24T14-05-17`命令，启动时 docker 镜像会在项目目录中生成`generated`、`tmp`和`resources`静态资源目录。
 3. 在初次生成静态资源目录后，就可以正常使用`hugo server`来启动项目了。
 
 #### 文档更新了怎么办？
 
-如果发现文档更新，并且根据文档名称在 [Issue 库](https://github.com/servicemesher/istio-official-translation/issues)中找不到对应的 Issue，可以 [新建 Issue](https://github.com/servicemesher/istio-official-translation/issues/new)，Issue 标题写入变更的文件名，例如 `content/docs/reference/config/policy-and-telemetry/adapters/_index.md`，并在 Body 中加入 `@dustise, @rootsongjc`。这样就可以避免在你进行翻译的同时，Bot 重新将该文件放入任务队列。
+如果发现文档更新，并且根据文档名称在 [Issue 库](https://github.com/servicemesher/istio-official-translation/issues)中找不到对应的 Issue，可以[新建 Issue](https://github.com/servicemesher/istio-official-translation/issues/new)，Issue 标题写入变更的文件名，例如 `content/docs/reference/config/policy-and-telemetry/adapters/_index.md`，并在 Body 中加入 `@dustise, @rootsongjc`。这样就可以避免在你进行翻译的同时，Bot 重新将该文件放入任务队列。
 
 #### 定义的锚点报拼写错误
 
@@ -249,7 +249,7 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 
 #### CI deploy/netlify 报错
 
-本地make serve没问题，但官方的deploy/netlify报如下错误：
+本地 make serve 没问题，但官方的 deploy/netlify 报如下错误：
 
 ```bash
 10:07:37 AM: added 35 packages from 9 contributors and audited 43 packages in 1.553s
@@ -269,18 +269,18 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 10:07:41 AM: make: *** [netlify] Error 1
 ```
 
-这是官方的一个[bug](https://github.com/istio/istio.io/pull/5379)，已经解决。
+这是官方的一个 [bug](https://github.com/istio/istio.io/pull/5379)，已经解决。
 
-#### CLA检测不通过
+#### CLA 检测不通过
 
-如果你在设置cla之前提交了PR，CI里的cla check会失败。可以先在PR中回复`@googlebot I signed it.`。如果还失败尝试回复`@googlebot I fixed it.`。如果还不行，所以最好的办法是关闭当前PR，重新用一个新的branch拷贝相应文件，再提交全新的PR即可。
+如果你在设置 cla 之前提交了 PR，CI 里的 cla check 会失败。可以先在 PR 中回复`@googlebot I signed it.`。如果还失败尝试回复`@googlebot I fixed it.`。如果还不行，所以最好的办法是关闭当前 PR，重新用一个新的 branch 拷贝相应文件，再提交全新的 PR 即可。
 
 #### ERROR: Unexpected end tag : p
 
-如果遇到此错误，说明还没有完全修复markdown的lint问题。需要先修复完即可通过CI检查。
+如果遇到此错误，说明还没有完全修复 markdown 的 lint 问题。需要先修复完即可通过 CI 检查。
 
 ## 感谢
 
-感谢您的辛勤付出！相信在大家共同的努力下Istio和Service Mesh技术会更加蓬勃的发展！
+感谢您的辛勤付出！相信在大家共同的努力下 Istio 和 Service Mesh 技术会更加蓬勃的发展！
 
-![ServiceMesher微信公众号二维码](https://tva1.sinaimg.cn/large/006y8mN6gy1g872im58vmj312m0begp8.jpg)
+! [ServiceMesher 微信公众号二维码](https://tva1.sinaimg.cn/large/006y8mN6gy1g872im58vmj312m0begp8.jpg)
