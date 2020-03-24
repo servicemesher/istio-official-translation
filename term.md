@@ -34,15 +34,15 @@
 
 使用 `` ` `` (反引号) 包裹的名词，这种名词一般不翻译、不能通过拼写检查、且不在 `专有名词` 列表内，所以需要将其包裹在 `` ` `` 内，如：`Kubectl` `Istioctl` `DaemonSet` 等，此时处理锚点分为以下几种情况：
 
-1.如果该标题整体不需要翻译，请保持原文，Istio 会自动生成正确的锚点，如：
+1. 如果该标题整体不需要翻译，请保持原文，Istio 会自动生成正确的锚点，如：
 
 `` AppSwitch `DaemonSet` `` 自动生成 -> `appswitch-daemonset`，[参考链接](https://istio.io/blog/2018/delayering-istio/#appswitch-daemonset)。
 
-2.如果该标题部分需要翻译，添加的锚点忽略使用反引号 `` ` `` 包裹的部分，如：
+2. 如果该标题部分需要翻译，添加的锚点忽略使用反引号 `` ` `` 包裹的部分，如：
 
 `` `Istioctl` auto-completion `` -> `auto-completion`，完整标题：``## `Istioctl` 自动补全{#auto-completion} ``，[参考链接](https://preliminary.istio.io/zh/docs/ops/diagnostic-tools/istioctl/#auto-completion)。
 
-3.使用 `` ` `` (反引号) 包裹的 `短语` 和确定 `无拼写` 错误的名词，此时可以将其视作 `忽略字符`，如：
+3. 使用 `` ` `` (反引号) 包裹的 `短语` 和确定 `无拼写` 错误的名词，此时可以将其视作 `忽略字符`，如：
 
 `` `no such hosts` or `no endpoints available` `` -> `no-such-hosts-or-no-endpoints-available`，[参考链接](https://preliminary.istio.io/zh/docs/ops/common-problems/injection/#no-such-hosts-or-no-endpoints-available-errors-in-deployment-status)。
 
@@ -80,8 +80,8 @@
 
 除去静态文件，其他所有的内链都需要添加`/zh`，而添加 `/zh` 后的新链接有可能：
 
-- 404 not found：请在群里提出或者新建issue，我们需要翻译它。
-- 仍然英文版或者已有中文版： 说明对应的内容正在被翻译或已经翻译完成，不用管。
+- 404 not found：请在群里提出或者新建 issue，我们需要翻译它。
+- 仍然英文版或者已有中文版：说明对应的内容正在被翻译或已经翻译完成，不用管。
 
 ## 常用词汇
 
@@ -127,7 +127,7 @@
 - monolithic application：单体应用
 - mount：挂载
 - multi-Tenancy：多租户
-- mutual TLS：双向TLS
+- mutual TLS：双向 TLS
 - namespace：命名空间
 - observability：可观测性
 - on-premise：物理机，实体机
@@ -145,7 +145,7 @@
 - rule evaluation：告警规则（Prometheus 中的术语）
 - scenario：场景
 - service：服务
-- service account：服务帐户（Kubernetes中的资源对象）
+- service account：服务帐户（Kubernetes 中的资源对象）
 - service mesh：服务网格
 - service registry、discovery：服务注册、发现
 - setting：设置
