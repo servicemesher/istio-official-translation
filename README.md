@@ -119,25 +119,42 @@ Press Ctrl+C to stop
 
 另外一种是直接使用docker镜像启动。
 
-运行`docker pull gcr.io/istio-testing/build-tools:master-2020-02-14T13-09-14`下载镜像，然后在Istio[网站仓库的根目录](https://github.com/istio/istio.io)下，执行`make serve`启动web服务器。
+在正确安装Docker后，运行下面的命令下载镜像：
 
-如果您的网络环境无法访问此资源，可以执行下面的命令使用替代镜像启动web服务：
 ```
-make serve IMG=jimmysong/istio-testing-build-tools:master-2020-02-14T13-09-14
+docker pull gcr.io/istio-testing/build-tools:master-2020-03-22T01-04-48 
 ```
 
-启动成功后通过`http://localhost:1313/zh`进行网站的预览。
+如果您的网络环境无法访问此资源，可以执行下面的命令下载镜像的镜像：
+
+```
+docker pull qksl/istio-testing-build-tools:master-2020-03-22T01-04-48
+docker tag qksl/istio-testing-build-tools:master-2020-03-22T01-04-48 gcr.io/istio-testing/build-tools:master-2020-03-22T01-04-48
+```
+
+然后在[istio.io 仓库的根目录](https://github.com/istio/istio.io)下，执行下面的命令启动web服务：
+
+```
+make serve 
+```
+
+启动成功后通过 `http://localhost:1313/zh` 进行网站的预览。
+
+如果你想通过局域网访问该页面，可以将 `Makefile.core.mk` 文件中的 `ISTIO_SERVE_DOMAIN ?= localhost` 修改为 `ISTIO_SERVE_DOMAIN ?= 局域网 IP`，然后再启动web服务：
+
+```
+make serve 
+```
+
+这可以让局域网中的其它计算机访问该页面（以及物理机访问虚拟机），注意：不要将该文件的改动提交至 pr。
+
+启动成功后通过 `http://局域网 IP:1313/zh` 进行网站的预览。
 
 #### Step5：提交PR
 
 执行`make lint`，初步做一下 CI 的检查，当看到有蓝色文字输出后没有报错就可以 `ctrl^c` 了，检查成功后再提交 PR。
 
 > 可以使用 `make INTERNAL_ONLY=True lint` 命令，在不进行外部链接检查的情况下，完成 Lint 步骤
-
-```bash
-docker pull jimmysong/istio-testing-build-tools:master-2020-02-14T13-09-14
-docker tag jimmysong/istio-testing-build-tools:master-2020-02-14T13-09-14 gcr.io/istio-testing/build-tools:master-2020-02-14T13-09-14
-```
 
 **提交PR**
 
