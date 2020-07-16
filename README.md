@@ -122,14 +122,14 @@ Press Ctrl+C to stop
 在正确安装 Docker 后，运行下面的命令下载镜像：
 
 ```
-docker pull gcr.io/istio-testing/build-tools:master-2020-03-22T01-04-48 
+docker pull gcr.io/istio-testing/build-tools:master-2020-07-13T16-10-49
 ```
 
 如果您的网络环境无法访问此资源，可以执行下面的命令下载镜像的镜像：
 
-```
-docker pull qksl/istio-testing-build-tools:master-2020-03-22T01-04-48
-docker tag qksl/istio-testing-build-tools:master-2020-03-22T01-04-48 gcr.io/istio-testing/build-tools:master-2020-03-22T01-04-48
+```bash
+docker pull jimmysong/istio-testing-build-tools:master-2020-07-13T16-10-49
+docker tag jimmysong/istio-testing-build-tools:master-2020-07-13T16-10-49 gcr.io/istio-testing/build-tools:master-2020-07-13T16-10-49
 ```
 
 然后在 [istio.io 仓库的根目录](https://github.com/istio/istio.io)下，执行下面的命令启动 web 服务：
@@ -166,7 +166,7 @@ zh-translation:<file_full_path>
 内容：
 ref: https://github.com/servicemesher/istio-official-translation/issues/<issueID>
 [ ] Configuration Infrastructure
-[ ] Docs
+[x] Docs
 [ ] Installation
 [ ] Networking
 [ ] Performance and Scalability
@@ -283,4 +283,4 @@ Refused to apply style from 'http://localhost:1313/css/all.css' because its MIME
 
 感谢您的辛勤付出！相信在大家共同的努力下 Istio 和 Service Mesh 技术会更加蓬勃的发展！
 
-! [ServiceMesher 微信公众号二维码](https://tva1.sinaimg.cn/large/006y8mN6gy1g872im58vmj312m0begp8.jpg)
+![ServiceMesher 微信公众号二维码](https://tva1.sinaimg.cn/large/006y8mN6gy1g872im58vmj312m0begp8.jpg)
