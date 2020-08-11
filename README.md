@@ -1,7 +1,5 @@
 # Istio 官方文档翻译指导手册
 
-## 概要
-
 2018 年我们社区组织翻译了 Istio 官网文档的 1.2 版本（已归档于：<https://archive.istio.io/v1.2/zh/>），随着 Istio 版本的快速迭代，老版本有许多需要更新的地方。为了让国内对 Istio 感兴趣的工程师可以学习到最新的官方文档，我们打算重启翻译工作，并基于官方的主线分支进行翻译，保证每次 Istio 在发布新版本时，同步的发布中文文档。
 
 感谢您加入我们的翻译团队，并为 Istio 的中文化工作作出贡献。本篇文档是帮助您进行高效翻译的指导手册，建议您在正式翻译前认真阅读。
@@ -121,15 +119,15 @@ Press Ctrl+C to stop
 
 在正确安装 Docker 后，运行下面的命令下载镜像：
 
-```
-docker pull gcr.io/istio-testing/build-tools:master-2020-07-16T22-57-32
+```bash
+docker pull gcr.io/istio-testing/build-tools:master-2020-08-07T13-59-49
 ```
 
 如果您的网络环境无法访问此资源，可以执行下面的命令下载镜像的镜像：
 
 ```bash
-docker pull jimmysong/istio-testing-build-tools:master-2020-07-16T22-57-32
-docker tag jimmysong/istio-testing-build-tools:master-2020-07-16T22-57-32 gcr.io/istio-testing/build-tools:master-2020-07-16T22-57-32
+docker pull jimmysong/istio-testing-build-tools:master-2020-08-07T13-59-49
+docker tag jimmysong/istio-testing-build-tools:master-2020-08-07T13-59-49 gcr.io/istio-testing/build-tools:master-2020-08-07T13-59-49
 ```
 
 然后在 [istio.io 仓库的根目录](https://github.com/istio/istio.io)下，执行下面的命令启动 web 服务：
